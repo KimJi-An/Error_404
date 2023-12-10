@@ -33,8 +33,44 @@ body {
     grid-template-rows: 1fr 19.5fr 1fr;
     background-color: $black;
 
+    .dot, .bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $mainFont, sans-serif;
+      background-color: $green;
+      background-color: $green;
+    }
+
+    .dot {
+      font-size: 25px;
+    }
+
    .bar {
-    background-color: $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    span {
+      width: max-content;
+      position: absolute;
+      word-spacing: 3px;
+      font-size: 17px;
+    }
+
+    &:nth-child(4) span {
+      transform: rotate(-90deg);
+    }
+
+    &:nth-child(6) span {
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(8) span {
+      transform: rotate(180deg);
+    }
    }
 
     .main {
