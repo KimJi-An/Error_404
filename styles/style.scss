@@ -89,9 +89,22 @@ body {
 
       .title {
         grid-column: 1 / span 8;
+        font-family: $titleFont, sans-serif;
+        font-size: 110px;
+        text-transform: uppercase;
+        word-spacing: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .nav {
+        padding: 0 10px;
+        font-family: $mainFont, sans-serif;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        
         &:nth-child(5) {
           grid-column: 4 / span 2;
         }
