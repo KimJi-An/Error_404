@@ -76,7 +76,7 @@ body {
     .main {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: 2.7fr repeat(2, 1.5fr) 3fr repeat(2, 2.5fr);
+      grid-template-rows: 2.7fr repeat(2, 1.5fr) 3fr repeat(2, 1.5fr);
       gap: $gap;
       background-color: $black;
       border: $gap solid $black;
@@ -98,7 +98,7 @@ body {
       }
 
       .nav {
-        padding: 0 10px;
+        padding: 0 15px;
         font-family: $mainFont, sans-serif;
         font-size: 17px;
         display: flex;
@@ -111,7 +111,7 @@ body {
       }
 
       .images {
-        padding: 10px;
+        padding: 15px;
         
         div {
           width: 100%;
@@ -139,6 +139,17 @@ body {
       }
 
       .article {
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        font-family: $mainFont, sans-serif;
+        font-size: 17px;
+
+        span {font-family: $bodyFont, sans-serif;
+          font-size: 15px;
+          opacity: 0.6;
+        }
+
         &:nth-child(8) {
           grid-column: 1 / span 4;
         }
@@ -149,6 +160,35 @@ body {
       }
 
       .section {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .contents {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 20px;
+
+          h4 {
+            font-family: $mainFont, sans-serif;
+            font-size: 17px;
+          }
+
+          p {
+            font-size: 13px;
+            line-height: 1.2;
+          }
+        }
+
         &:nth-child(11) {
           grid-column: 3 / span 2;
         }
@@ -166,6 +206,40 @@ body {
       .subscribe {
         grid-column: 5 / span 2;
         grid-row: 5 / span 2;
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $lightGrey;
+
+        h3, .btn {
+          font-family: $mainFont, sans-serif;
+          font-size: 17px;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          background-color: inherit;
+          border-bottom: 1px solid $black;
+
+          .mail-input{
+            font-size: 13px;
+          }
+        }
+      }
+
+      .sns {
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        font-family: $mainFont, sans-serif;
+        font-size: 17px;
+        background-color: $lightGrey;
+
+        &:last-child {
+          background : url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" style="background:honeydew" ><line x1="0" y1="0" x2="100%" y2="100%" stroke="black" /></svg>');
+        }
       }
     }
   }
