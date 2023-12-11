@@ -12,6 +12,54 @@ $mainFont: 'Russo One';
 $bodyFont: 'Rethink Sans';
 $borderFont: 'Dhurjati';
 
+@keyframes top-slide {
+  0% {
+    transform: translateX(25%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes bottom-slide {
+  0% {
+    transform: translateX(-25%) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(25%) rotate(180deg);
+  }
+}
+
+@keyframes left-slide {
+  0% {
+    transform: translateY(-10000%) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(0%) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(10000%) rotate(-90deg);
+  }
+}
+
+@keyframes right-slide {
+  0% {
+    transform: translateY(10000%) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0%) rotate(90deg);
+  }
+  100% {
+    transform: translateY(-10000%) rotate(90deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -60,16 +108,20 @@ body {
         font-size: 17px;
       }
 
+      &:nth-child(2) span {
+        animation: top-slide 27s linear infinite;
+      }
+
       &:nth-child(4) span {
-        transform: rotate(-90deg);
+        animation: left-slide 27s linear infinite;
       }
 
       &:nth-child(6) span {
-        transform: rotate(90deg);
+        animation: right-slide 27s linear infinite;
       }
 
       &:nth-child(8) span {
-        transform: rotate(180deg);
+        animation: bottom-slide 27s linear infinite;
       }
     }
 
